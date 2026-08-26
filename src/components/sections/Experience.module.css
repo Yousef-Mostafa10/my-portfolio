@@ -1,0 +1,313 @@
+.experience {
+  position: relative;
+  overflow: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* Column */
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.colTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #F0F8FF;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.08);
+}
+
+.colTitleAward {
+  margin-top: 12px;
+}
+
+.colIcon {
+  font-size: 20px;
+}
+
+/* Timeline */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.timelineItem {
+  display: grid;
+  grid-template-columns: 20px 20px 1fr;
+  gap: 0 16px;
+  padding-bottom: 28px;
+}
+
+.timelineDot {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 4px;
+}
+
+.dotInner {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0066FF, #00D4FF);
+  flex-shrink: 0;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+  z-index: 2;
+  position: relative;
+}
+
+.dotBlue {
+  background: linear-gradient(135deg, #0066FF, #6600FF);
+}
+
+.dotRing {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  top: 0;
+  left: -4px;
+  animation: ringPulse 2s ease-in-out infinite;
+}
+
+@keyframes ringPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.2); }
+}
+
+.timelineLine {
+  width: 1px;
+  background: linear-gradient(180deg, rgba(0, 212, 255, 0.3) 0%, transparent 100%);
+  margin-top: 16px;
+  grid-column: 2;
+}
+
+/* Timeline Card */
+.timelineCard {
+  padding: 24px;
+  grid-column: 3;
+  grid-row: 1;
+  margin-top: -2px;
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.cardType {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  color: #00D4FF;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 3px 8px;
+  background: rgba(0, 212, 255, 0.08);
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.typeEdu {
+  color: #6699FF;
+  background: rgba(100, 150, 255, 0.08);
+}
+
+.cardRole {
+  font-size: 16px;
+  font-weight: 700;
+  color: #F0F8FF;
+  line-height: 1.3;
+}
+
+.cardCompany {
+  font-size: 13px;
+  color: #8BAFC7;
+  margin-top: 4px;
+}
+
+.cardMeta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.cardPeriod {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: #00D4FF;
+  background: rgba(0, 212, 255, 0.06);
+  padding: 4px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.cardLocation {
+  font-size: 11px;
+  color: #4A6580;
+}
+
+.cardDesc {
+  font-size: 14px;
+  color: #8BAFC7;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.highlights {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.highlightItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: #8BAFC7;
+  line-height: 1.6;
+}
+
+.bullet {
+  color: #00D4FF;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.techRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+/* GPA Row */
+.gpaRow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 0;
+  border-top: 1px solid rgba(0, 212, 255, 0.06);
+  border-bottom: 1px solid rgba(0, 212, 255, 0.06);
+  margin: 4px 0 16px;
+}
+
+.gpaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.gpaValue {
+  font-size: 15px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #0066FF, #00D4FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gpaLabel {
+  font-size: 10px;
+  color: #4A6580;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.gpaDivider {
+  width: 1px;
+  height: 40px;
+  background: rgba(0, 212, 255, 0.1);
+}
+
+.honorBadge {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #F0D060;
+  background: rgba(240, 208, 96, 0.06);
+  border: 1px solid rgba(240, 208, 96, 0.2);
+  border-radius: 6px;
+  padding: 6px 12px;
+}
+
+/* Award Card */
+.awardCard {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-color: rgba(240, 208, 96, 0.15);
+}
+
+.awardEmoji {
+  font-size: 40px;
+  flex-shrink: 0;
+}
+
+.awardTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #F0D060;
+  margin-bottom: 4px;
+}
+
+.awardEvent {
+  font-size: 13px;
+  color: #F0F8FF;
+  margin-bottom: 4px;
+}
+
+.awardOrg {
+  font-size: 12px;
+  color: #4A6580;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .timelineItem {
+    grid-template-columns: 20px 12px 1fr;
+    gap: 0 10px;
+  }
+
+  .cardTop {
+    flex-direction: column;
+  }
+
+  .cardMeta {
+    align-items: flex-start;
+    text-align: left;
+  }
+}

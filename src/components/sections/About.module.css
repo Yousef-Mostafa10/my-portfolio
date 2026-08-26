@@ -1,0 +1,317 @@
+.about {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 102, 255, 0.02) 50%, transparent 100%);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* Bio Column */
+.bioCol {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Profile Badge */
+.profileBadge {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 24px;
+  background: rgba(5, 10, 20, 0.7);
+  border: 1px solid rgba(0, 212, 255, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(20px);
+}
+
+.profileAvatar {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0066FF, #00D4FF);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.avatarInitials {
+  font-size: 24px;
+  font-weight: 800;
+  color: #fff;
+  z-index: 2;
+}
+
+.avatarRing {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  animation: ringPulse 2s ease-in-out infinite;
+}
+
+.avatarRing2 {
+  position: absolute;
+  inset: -10px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 212, 255, 0.1);
+  animation: ringPulse 2s ease-in-out infinite 0.5s;
+}
+
+@keyframes ringPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.05); }
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.profileName {
+  font-size: 18px;
+  font-weight: 700;
+  color: #F0F8FF;
+}
+
+.profileRole {
+  font-size: 14px;
+  color: #00D4FF;
+  font-weight: 500;
+}
+
+.profileLocation {
+  font-size: 12px;
+  color: #4A6580;
+}
+
+/* Bio Card */
+.bioCard {
+  padding: 28px;
+}
+
+.bioText {
+  font-size: 16px;
+  color: #8BAFC7;
+  line-height: 1.8;
+}
+
+/* Vision Card */
+.visionCard {
+  padding: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.visionIcon {
+  font-size: 28px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.visionTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #00D4FF;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.visionText {
+  font-size: 15px;
+  color: #8BAFC7;
+  line-height: 1.7;
+}
+
+/* Award Card */
+.awardCard {
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-color: rgba(255, 215, 0, 0.15);
+  background: rgba(255, 215, 0, 0.03);
+}
+
+.awardIcon {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.awardTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #F0F8FF;
+  line-height: 1.4;
+}
+
+.awardOrg {
+  font-size: 12px;
+  color: #4A6580;
+  margin-top: 4px;
+}
+
+/* Right Column */
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Stats Grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.statCard {
+  padding: 24px 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.counterValue {
+  font-size: 28px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #0066FF, #00D4FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 11px;
+  color: #4A6580;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-family: 'JetBrains Mono', monospace;
+  text-align: center;
+}
+
+/* Fun Facts */
+.funFacts {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.funFactsTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #8BAFC7;
+  margin-bottom: 4px;
+}
+
+.funFactsTag {
+  color: #0066FF;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.factsList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.factCard {
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-radius: 12px;
+  cursor: default;
+}
+
+.factIcon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.factText {
+  font-size: 14px;
+  color: #8BAFC7;
+}
+
+/* Languages Card */
+.languagesCard {
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.langTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: #F0F8FF;
+  margin-bottom: 4px;
+}
+
+.langRow {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.langInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.langName {
+  font-size: 14px;
+  font-weight: 600;
+  color: #F0F8FF;
+}
+
+.langLevel {
+  font-size: 12px;
+  color: #4A6580;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.langBar {
+  height: 4px;
+  background: rgba(0, 212, 255, 0.08);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.langFill {
+  height: 100%;
+  background: linear-gradient(90deg, #0066FF, #00D4FF);
+  border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .statsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

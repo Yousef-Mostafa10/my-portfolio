@@ -1,0 +1,140 @@
+.certificates {
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 102, 255, 0.015) 50%, transparent 100%);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
+}
+
+/* Certificate Card */
+.certCard {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Preview Area */
+.certPreview {
+  position: relative;
+  height: 200px;
+  background: linear-gradient(135deg, rgba(0, 30, 80, 0.6), rgba(0, 10, 30, 0.9));
+  overflow: hidden;
+}
+
+.certPlaceholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.certIcon {
+  color: #00D4FF;
+  filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.5));
+}
+
+.certPreviewText {
+  font-size: 12px;
+  color: #4A6580;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.certGlow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(0, 212, 255, 0.05) 0%, transparent 70%);
+}
+
+.comingSoonPlaceholder {
+  background: rgba(0, 10, 30, 0.5);
+  border: 1px dashed rgba(0, 212, 255, 0.1);
+}
+
+.plusIcon {
+  font-size: 48px;
+  color: rgba(0, 212, 255, 0.2);
+  font-weight: 300;
+}
+
+/* Card Body */
+.certBody {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.certBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #00D4FF;
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 50px;
+  padding: 4px 10px;
+  width: fit-content;
+}
+
+.certBadgeDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #00D4FF;
+  box-shadow: 0 0 6px rgba(0, 212, 255, 0.8);
+}
+
+.certTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #F0F8FF;
+  line-height: 1.4;
+}
+
+.certIssuer {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0066FF;
+}
+
+.certDate {
+  font-size: 12px;
+  color: #4A6580;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.certDesc {
+  font-size: 13px;
+  color: #8BAFC7;
+  line-height: 1.7;
+  flex: 1;
+}
+
+.certActions {
+  margin-top: 8px;
+}
+
+.comingSoon {
+  font-size: 12px;
+  color: #4A6580;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.comingSoonCard {
+  opacity: 0.6;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
