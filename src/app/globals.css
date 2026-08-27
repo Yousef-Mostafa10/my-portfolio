@@ -368,3 +368,17 @@ body {
     --container-padding: 0 16px;
   }
 }
+
+/* ---- GITHUB PAGES / STATIC EXPORT FALLBACK ---- */
+/* Ensure framer-motion elements are always visible if animations fail */
+[style*="opacity: 0"],
+[style*="opacity:0"] {
+  opacity: 1 !important;
+}
+[style*="transform: translateY(40px)"],
+[style*="transform: translateY(30px)"],
+[style*="transform: translateY(20px)"],
+[style*="transform: translateY(-20px)"] {
+  transform: none !important;
+}
+
