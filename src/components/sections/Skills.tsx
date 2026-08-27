@@ -1,6 +1,10 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { 
+  FiCode, FiSmartphone, FiZap, FiDatabase, 
+  FiGlobe, FiGitBranch, FiTool, FiLayers 
+} from 'react-icons/fi';
 import { portfolioData } from '@/lib/data';
 import styles from './Skills.module.css';
 
@@ -14,6 +18,20 @@ const containerVariants = {
 const itemVariants = {
   hidden: { opacity: 0, scale: 0.85 },
   visible: { opacity: 1, scale: 1, transition: { duration: 0.3 } },
+};
+
+const CategoryIcon = ({ category }: { category: string }) => {
+  switch (category) {
+    case 'Languages': return <FiCode size={20} />;
+    case 'Frameworks': return <FiSmartphone size={20} />;
+    case 'State Management': return <FiZap size={20} />;
+    case 'Databases': return <FiDatabase size={20} />;
+    case 'APIs & Networking': return <FiGlobe size={20} />;
+    case 'Version Control': return <FiGitBranch size={20} />;
+    case 'Tools & IDEs': return <FiTool size={20} />;
+    case 'Architecture & Concepts': return <FiLayers size={20} />;
+    default: return <FiCode size={20} />;
+  }
 };
 
 export default function Skills() {
@@ -48,7 +66,7 @@ export default function Skills() {
             >
               {/* Category Header */}
               <div className={styles.catHeader}>
-                <span className={styles.catIcon}>{category.icon}</span>
+                <span className={styles.catIcon}><CategoryIcon category={category.category} /></span>
                 <h3 className={styles.catTitle}>{category.category}</h3>
                 <span className={styles.catCount}>{category.items.length}</span>
               </div>
@@ -85,7 +103,7 @@ export default function Skills() {
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           <div className={styles.bannerContent}>
-            <span className={styles.bannerIcon}>📱</span>
+            <span className={styles.bannerIcon}><FiSmartphone size={32} /></span>
             <div>
               <h4 className={styles.bannerTitle}>Primary Expertise — Flutter & Dart</h4>
               <p className={styles.bannerDesc}>
