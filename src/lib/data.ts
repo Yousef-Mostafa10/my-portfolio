@@ -23,7 +23,7 @@ export const portfolioData = {
     { label: "Projects Built", value: 5, suffix: "+" },
     { label: "Class Rank", value: 2, prefix: "#" },
     { label: "GPA Score", value: 4.43, suffix: "/5" },
-    { label: "Award Won", value: 1, suffix: "🏆" },
+    { label: "Award Won", value: 1, suffix: "st Place" },
     { label: "Certificates", value: 1, suffix: "+" },
   ],
 

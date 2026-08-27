@@ -2,6 +2,10 @@
 
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import {
+  FiMapPin, FiTarget, FiAward, FiGlobe,
+  FiCpu, FiLayers, FiSmartphone, FiStar, FiBookOpen,
+} from 'react-icons/fi';
 import { portfolioData } from '@/lib/data';
 import styles from './About.module.css';
 
@@ -84,7 +88,7 @@ export default function About() {
               <div className={styles.profileInfo}>
                 <h3 className={styles.profileName}>{personal.name}</h3>
                 <p className={styles.profileRole}>Flutter Developer</p>
-                <span className={styles.profileLocation}>📍 {personal.location}</span>
+                <span className={styles.profileLocation}><FiMapPin size={13} /> {personal.location}</span>
               </div>
             </div>
 
@@ -95,7 +99,7 @@ export default function About() {
 
             {/* Vision card */}
             <div className={`glass-card ${styles.visionCard}`}>
-              <div className={styles.visionIcon}>🎯</div>
+              <div className={styles.visionIcon}><FiTarget size={20} /></div>
               <div>
                 <h4 className={styles.visionTitle}>My Vision</h4>
                 <p className={styles.visionText}>{personal.vision}</p>
@@ -104,7 +108,7 @@ export default function About() {
 
             {/* Award */}
             <div className={`glass-card ${styles.awardCard}`}>
-              <span className={styles.awardIcon}>🥇</span>
+              <span className={styles.awardIcon}><FiAward size={22} /></span>
               <div>
                 <p className={styles.awardTitle}>1st Place — Science Students&apos; Innovation Forum</p>
                 <p className={styles.awardOrg}>Delta Region Universities Alliance</p>
@@ -152,20 +156,24 @@ export default function About() {
                 Fun Facts
               </h3>
               <div className={styles.factsList}>
-                {funFacts.map((fact, i) => (
-                  <motion.div
-                    key={i}
-                    className={`glass-card ${styles.factCard}`}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.1, duration: 0.4 }}
-                    whileHover={{ x: 4 }}
-                  >
-                    <span className={styles.factIcon}>{fact.icon}</span>
-                    <span className={styles.factText}>{fact.text}</span>
-                  </motion.div>
-                ))}
+                {funFacts.map((fact, i) => {
+                  const FactIcons = [FiCpu, FiLayers, FiSmartphone, FiAward, FiBookOpen];
+                  const FactIcon = FactIcons[i % FactIcons.length];
+                  return (
+                    <motion.div
+                      key={i}
+                      className={`glass-card ${styles.factCard}`}
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.1, duration: 0.4 }}
+                      whileHover={{ x: 4 }}
+                    >
+                      <span className={styles.factIcon}><FactIcon size={16} /></span>
+                      <span className={styles.factText}>{fact.text}</span>
+                    </motion.div>
+                  );
+                })}
               </div>
             </motion.div>
 
@@ -177,7 +185,7 @@ export default function About() {
               viewport={{ once: true, margin: '-80px' }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <h4 className={styles.langTitle}>🌍 Languages</h4>
+              <h4 className={styles.langTitle}><FiGlobe size={15} /> Languages</h4>
               {portfolioData.languages.map((lang) => (
                 <div key={lang.name} className={styles.langRow}>
                   <div className={styles.langInfo}>
