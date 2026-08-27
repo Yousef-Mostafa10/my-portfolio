@@ -234,7 +234,7 @@ export const portfolioData = {
       date: "Sep 2025",
       description: "Intensive Flutter & Dart training covering Clean Architecture, SOLID principles, state management (Bloc), Firebase integration, and REST API development.",
       imageUrl: "",
-      downloadUrl: "",
+      downloadUrl: "/my-portfolio/certificates/ITI-certificate.pdf",
     },
   ],
 
