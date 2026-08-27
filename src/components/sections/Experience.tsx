@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { FiBriefcase, FiMapPin, FiAward, FiBook } from 'react-icons/fi';
 import { portfolioData } from '@/lib/data';
 import styles from './Experience.module.css';
 
@@ -34,7 +35,7 @@ export default function Experience() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <span className={styles.colIcon}>💼</span>
+              <span className={styles.colIcon}><FiBriefcase size={24} /></span>
               Work & Training
             </motion.h3>
 
@@ -63,7 +64,7 @@ export default function Experience() {
                       </div>
                       <div className={styles.cardMeta}>
                         <span className={styles.cardPeriod}>{item.period}</span>
-                        <span className={styles.cardLocation}>📍 {item.location}</span>
+                        <span className={styles.cardLocation}><FiMapPin size={12} /> {item.location}</span>
                       </div>
                     </div>
 
@@ -99,7 +100,7 @@ export default function Experience() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <span className={styles.colIcon}>🎓</span>
+              <span className={styles.colIcon}><FiBook size={24} /></span>
               Education
             </motion.h3>
 
@@ -128,7 +129,7 @@ export default function Experience() {
                       </div>
                       <div className={styles.cardMeta}>
                         <span className={styles.cardPeriod}>{item.period}</span>
-                        <span className={styles.cardLocation}>📍 {item.location}</span>
+                        <span className={styles.cardLocation}><FiMapPin size={12} /> {item.location}</span>
                       </div>
                     </div>
 
@@ -144,7 +145,7 @@ export default function Experience() {
                       </div>
                     </div>
 
-                    <span className={styles.honorBadge}>🏆 {item.honor}</span>
+                    <span className={styles.honorBadge}><FiAward size={12} /> {item.honor}</span>
                   </div>
                 </motion.div>
               ))}
@@ -158,7 +159,7 @@ export default function Experience() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <span className={styles.colIcon}>🏆</span>
+              <span className={styles.colIcon}><FiAward size={24} /></span>
               Awards
             </motion.h3>
 

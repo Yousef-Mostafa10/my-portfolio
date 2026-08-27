@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiMail, FiHeart } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiMail, FiHeart, FiMapPin } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
 import { portfolioData } from '@/lib/data';
 import styles from './Footer.module.css';
@@ -41,7 +41,7 @@ export default function Footer() {
           <div className={styles.brand}>
             <div className={styles.logoMark}>YM<span className={styles.dot} /></div>
             <p className={styles.tagline}>
-              Flutter Developer · Building mobile experiences from Alexandria, Egypt 🇪🇬
+              Flutter Developer · Building mobile experiences from Alexandria, Egypt
             </p>
             <div className={styles.socialRow}>
               {socialLinks.map(link => (
@@ -92,7 +92,7 @@ export default function Footer() {
                 {personal.phone}
               </a>
               <span className={styles.contactItem}>
-                📍 {personal.location}
+                <FiMapPin size={12} /> {personal.location}
               </span>
             </div>
 

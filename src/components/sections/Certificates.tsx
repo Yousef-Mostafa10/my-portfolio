@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FiDownload, FiAward } from 'react-icons/fi';
+import { FiDownload, FiAward, FiPaperclip } from 'react-icons/fi';
 import { portfolioData } from '@/lib/data';
 import styles from './Certificates.module.css';
 
@@ -72,7 +72,7 @@ export default function Certificates() {
                     </a>
                   ) : (
                     <span className={styles.comingSoon}>
-                      📎 Certificate upload coming soon
+                      <FiPaperclip size={14} /> Certificate upload coming soon
                     </span>
                   )}
                 </div>

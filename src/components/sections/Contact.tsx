@@ -2,9 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import {
-  FiGithub, FiLinkedin, FiMail, FiSend, FiMapPin, FiPhone,
-} from 'react-icons/fi';
+import { FiMail, FiMapPin, FiGithub, FiLinkedin, FiSend, FiCheckCircle } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
 import { portfolioData } from '@/lib/data';
 import styles from './Contact.module.css';
@@ -249,7 +247,7 @@ export default function Contact() {
                 ) : (
                   <FiSend size={16} />
                 )}
-                {status === 'sending' ? 'Sending...' : status === 'success' ? 'Sent! 🎉' : 'Send Message'}
+                {status === 'sending' ? 'Sending...' : status === 'success' ? 'Sent!' : 'Send Message'}
               </button>
 
               {status === 'success' && (
@@ -258,7 +256,7 @@ export default function Contact() {
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                 >
-                  ✅ Message sent! I&apos;ll get back to you soon.
+                  <FiCheckCircle size={16} /> Message sent! I&apos;ll get back to you soon.
                 </motion.p>
               )}
             </form>

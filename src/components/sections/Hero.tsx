@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import {
-  FiGithub, FiLinkedin, FiMail, FiDownload, FiArrowRight, FiChevronDown
+  FiGithub, FiLinkedin, FiMail, FiDownload, FiArrowRight, FiChevronDown, FiArrowDown, FiMapPin
 } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
 import { portfolioData } from '@/lib/data';
@@ -109,7 +109,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.65, duration: 0.5 }}
         >
-          Flutter Developer from <span className={styles.locationTag}>Alexandria 🇪🇬</span> — building
+          Flutter Developer from <span className={styles.locationTag}><FiMapPin size={14} style={{ display: 'inline', marginBottom: '-2px' }} /> Alexandria</span> — building
           high-performance mobile experiences with <span className={styles.highlight}>Clean Architecture</span> and
           a passion for <span className={styles.highlight}>beautiful UI</span>.
         </motion.p>
@@ -170,7 +170,7 @@ export default function Hero() {
           ))}
 
           <div className={styles.socialDivider} aria-hidden="true" />
-          <span className={styles.locationBadge}>📍 {personal.location}</span>
+          <span className={styles.locationBadge}><FiMapPin size={12} style={{ display: 'inline', marginBottom: '-1px' }} /> {personal.location}</span>
         </motion.div>
 
         {/* Stats row */}
