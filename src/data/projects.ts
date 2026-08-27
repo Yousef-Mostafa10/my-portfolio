@@ -124,7 +124,15 @@ export const projects: ProjectData[] = [
     github: "https://github.com/Yousef-Mostafa10/Student-grades-APP",
     featured: false,
     order: 4,
-    images: [],
+    images: [
+      "/my-portfolio/images/projects/student-grades/1.jpeg",
+      "/my-portfolio/images/projects/student-grades/2.jpeg",
+      "/my-portfolio/images/projects/student-grades/3.jpeg",
+      "/my-portfolio/images/projects/student-grades/4.jpeg",
+      "/my-portfolio/images/projects/student-grades/5.jpeg",
+      "/my-portfolio/images/projects/student-grades/6.jpeg",
+      "/my-portfolio/images/projects/student-grades/7.jpeg",
+    ],
   },
   {
     id: "image-processing",
