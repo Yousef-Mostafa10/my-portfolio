@@ -14,7 +14,7 @@ export const portfolioData = {
     phone: "+201155474660",
     github: "https://github.com/Yousef-Mostafa10",
     linkedin: "https://www.linkedin.com/in/yousef-mostafa-flutter-developer",
-    cvUrl: "/cv/yousef-cv.pdf",
+    cvUrl: "/my-portfolio/cv/yousef-cv.pdf",
     profileImage: "/images/profile.jpg",
   },
 

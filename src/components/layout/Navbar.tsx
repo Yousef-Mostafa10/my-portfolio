@@ -145,7 +145,7 @@ export default function Navbar() {
               ))}
 
               <motion.a
-                href="/cv/yousef-cv.pdf"
+                href="/my-portfolio/cv/yousef-cv.pdf"
                 download
                 className={`${styles.mobileNavCta} btn-primary`}
                 initial={{ opacity: 0, y: 20 }}
