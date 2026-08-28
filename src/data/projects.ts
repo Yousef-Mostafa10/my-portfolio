@@ -102,7 +102,14 @@ export const projects: ProjectData[] = [
     github: "https://github.com/Yousef-Mostafa10/registering_attendance",
     featured: false,
     order: 3,
-    images: [],
+    images: [
+      "/my-portfolio/images/projects/smart-attendance/1.jpeg",
+      "/my-portfolio/images/projects/smart-attendance/2.jpeg",
+      "/my-portfolio/images/projects/smart-attendance/3.jpeg",
+      "/my-portfolio/images/projects/smart-attendance/4.jpeg",
+      "/my-portfolio/images/projects/smart-attendance/5.jpeg",
+      "/my-portfolio/images/projects/smart-attendance/6.jpeg",
+    ],
   },
   {
     id: "student-grades",
