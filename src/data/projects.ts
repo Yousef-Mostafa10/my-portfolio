@@ -78,7 +78,7 @@ export const projects: ProjectData[] = [
     ],
     github: "https://github.com/Yousef-Mostafa10/Movie-App",
     featured: false,
-    order: 2,
+    order: 4,
     images: [],
   },
   {
@@ -101,7 +101,7 @@ export const projects: ProjectData[] = [
     ],
     github: "https://github.com/Yousef-Mostafa10/registering_attendance",
     featured: false,
-    order: 3,
+    order: 2,
     images: [
       "/my-portfolio/images/projects/smart-attendance/8.jpeg",
       "/my-portfolio/images/projects/smart-attendance/1.jpeg",
@@ -132,7 +132,7 @@ export const projects: ProjectData[] = [
     ],
     github: "https://github.com/Yousef-Mostafa10/Student-grades-APP",
     featured: false,
-    order: 4,
+    order: 3,
     images: [
       "/my-portfolio/images/projects/student-grades/7.jpeg",
       "/my-portfolio/images/projects/student-grades/3.jpeg",
