@@ -103,12 +103,14 @@ export const projects: ProjectData[] = [
     featured: false,
     order: 3,
     images: [
+      "/my-portfolio/images/projects/smart-attendance/8.jpeg",
       "/my-portfolio/images/projects/smart-attendance/1.jpeg",
       "/my-portfolio/images/projects/smart-attendance/2.jpeg",
       "/my-portfolio/images/projects/smart-attendance/3.jpeg",
       "/my-portfolio/images/projects/smart-attendance/4.jpeg",
       "/my-portfolio/images/projects/smart-attendance/5.jpeg",
       "/my-portfolio/images/projects/smart-attendance/6.jpeg",
+      "/my-portfolio/images/projects/smart-attendance/7.jpeg",
     ],
   },
   {
